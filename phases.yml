@@ -1,0 +1,14 @@
+phases:
+    - duration: 300
+      arrivalRate: 5
+      name: "Warm-up"
+      #Create 5 virtual users coming at an average of 5 minutes of interval.
+    - pause: 10
+      #It will wait for 10 seconds
+    - duration: 60
+      arrivalCount: 30
+     #Create 30 virtual user in duration of 60 seconds.
+    - duration: 600
+      arrivalRate: 50
+      name: "High load phase"
+      #We can name the arrival rate

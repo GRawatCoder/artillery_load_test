@@ -1,0 +1,11 @@
+config:
+  target: 'https://reqres.in'
+  phases:
+    - duration: 50
+      arrivalRate: 15
+scenarios:
+  - flow:
+    - put:
+        url: "/api/users/2"
+        json:
+          job: "SE"

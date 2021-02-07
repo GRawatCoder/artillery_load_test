@@ -1,0 +1,19 @@
+config:
+  target: "https://reqres.in/"
+  phases:
+    - duration: 10
+      arrivalRate: 1
+  environments:
+    production:
+      target: "http://dummy.prod:40403"
+    staging:
+      target: "http://dummy.staging:3002"
+      phases:
+        -
+          duration: 20
+          arrivalRate: 1
+scenarios:
+  - flow:
+    - get:
+        url: "/api/users/2"
+
